@@ -21,11 +21,12 @@
     "@types/restify": "^8.4.1"
   },
   "dependencies": {
-    "ts-node-dev": "^1.0.0-pre.44",
     "azure-storage": "^2.10.3",
     "dotenv": "^8.2.0",
     "got": "^9.6.0",
     "restify": "^8.4.0",
+    "restify-cors-middleware": "^1.1.1",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.2"
   }
 }
