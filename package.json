@@ -1,10 +1,11 @@
 {
-  "name": "tsrest",
+  "name": "pillagers-api",
   "version": "1.0.0",
   "description": "Scaffolding for a minimalist Typescript REST api",
-  "main": "main.ts",
+  "main": "./src/server.ts",
   "scripts": {
-    "start": "tsnd --respawn ./src/server.ts"
+    "start": "tsnd ./src/server.ts",
+    "watch": "tsnd --respawn ./src/server.ts"
   },
   "keywords": [
     "typescript",
@@ -17,10 +18,10 @@
   "devDependencies": {
     "@types/got": "^9.6.9",
     "@types/node": "^12.12.7",
-    "@types/restify": "^8.4.1",
-    "ts-node-dev": "^1.0.0-pre.44"
+    "@types/restify": "^8.4.1"
   },
   "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
     "azure-storage": "^2.10.3",
     "dotenv": "^8.2.0",
     "got": "^9.6.0",
