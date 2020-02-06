@@ -1,0 +1,30 @@
+{
+  "name": "tsrest",
+  "version": "1.0.0",
+  "description": "Scaffolding for a minimalist Typescript REST api",
+  "main": "main.ts",
+  "scripts": {
+    "start": "tsnd --respawn ./src/server.ts"
+  },
+  "keywords": [
+    "typescript",
+    "REST",
+    "api",
+    "got"
+  ],
+  "author": "damsleth",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/got": "^9.6.9",
+    "@types/node": "^12.12.7",
+    "@types/restify": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "dependencies": {
+    "azure-storage": "^2.10.3",
+    "dotenv": "^8.2.0",
+    "got": "^9.6.0",
+    "restify": "^8.4.0",
+    "typescript": "^3.7.2"
+  }
+}
