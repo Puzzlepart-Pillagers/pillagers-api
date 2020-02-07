@@ -13,7 +13,10 @@ export module Endpoints {
         server.get("/echo/:name", Api.echo);
         server.post("/api/azure",Azure.post) // TODO
         server.get("/api/azure",Azure.get) // FETCHES ALL ROWS NOW
+
+        // RELEVANT ONES
         server.get("/api/get/:table",Azure.get) // FETCHES ALL ROWS NOW
+        server.post("/api/post/:table",Azure.post) // TODO
         server.get("/*", restify.plugins.serveStatic({ directory: "./public", default: "index.html" }))
     }
 }
