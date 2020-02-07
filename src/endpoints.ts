@@ -13,6 +13,7 @@ export module Endpoints {
         server.get("/echo/:name", Api.echo);
         server.post("/api/azure",Azure.post) // TODO
         server.get("/api/azure",Azure.get) // FETCHES ALL ROWS NOW
+        server.get("/api/get/:table",Azure.get) // FETCHES ALL ROWS NOW
         server.get("/*", restify.plugins.serveStatic({ directory: "./public", default: "index.html" }))
     }
 }

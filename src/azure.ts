@@ -1,8 +1,19 @@
 import { createTableService, TableQuery, TableUtilities } from "azure-storage"
 const azureTableService = createTableService(process.env.AZURE_STORAGE_CONNECTION_STRING);
-const Units = process.env.AZURE_STORAGE_UNITS_TABLE_NAME;
 
 export module Azure {
+    
+    // retrieve all kings or units
+    export function get(req, res, next) {
+        const query = createQuery(100);
+        queryTable(req.params.table, query).then(entries => {
+            res.send(entries);
+            return next();
+        }).catch(err => {
+            res.send(`lol error${err}`)
+        })
+    }
+    
     export async function post(req, res, next) {
         let body = await req.body;
         console.log(req)
@@ -10,18 +21,6 @@ export module Azure {
         res.send(`Azure dummy response: ${JSON.stringify(req.body)}`);
         return next();
     }
-
-    // retrieve all rows, yo
-    export function get(req, res, next) {
-        const query = createQuery(100);
-        queryTable(Units, query).then(entries => {
-            res.send(entries);
-            return next();
-        }).catch(err => {
-            res.send(`lol error${err}`)
-        })
-    }
-
 
     /**
      * Function that simplifes creating a new TableQuery from azure-storage
